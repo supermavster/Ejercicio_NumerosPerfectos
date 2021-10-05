@@ -3,7 +3,7 @@ En este repositorio encuentras la descripción del ejercicio que te invita a res
 ## Descripción
 Se busca que crees un algoritmo el cuál calcule, dado un número n, los números perfectos que son menores a n. 
 
-La primera pregunta que te debe de surgir es ¿pero qué es un numero perfecto? Pues un número perfecto es aquel el cuál la suma de sus divisores te da el mismo, claro sin contar como divisor a este mismo. Para ponerte un ejemplo, el número 12 es un número perfecto, esto debido a que 6 es divisible entre 1, 2 y 3, entonces:
+La primera pregunta que te debe de surgir es ¿pero qué es un numero perfecto? Pues un número perfecto es aquel el cuál la suma de sus divisores te da el mismo, claro sin contar como divisor a este mismo. Para ponerte un ejemplo, el número 6 es un número perfecto, esto debido a que 6 es divisible entre 1, 2 y 3, entonces:
 <div align="center">
 1+2+3=6
 </div>
