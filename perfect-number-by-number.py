@@ -24,7 +24,6 @@ class PerfectNumberByNumber:
     def calculate_perfect(self,number):
         if self.is_prime(number):
             complement = (math.pow(2, number) - 1)
-            print("{} is a perfect number".format(complement))
             if self.is_prime(complement):
                 calc = math.pow(2, (number - 1))
                 result = calc * complement
