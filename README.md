@@ -1,4 +1,4 @@
-# Ejercicio_NumerosPerfectos
+# Ejercicio_NúmerosPerfectos
 
 En este repositorio encuentras la descripción del ejercicio que te invita a resolver un problema el cual consiste en encontrar a los primeros números perfectos menores a n.
 ## Descripción
@@ -7,7 +7,7 @@ Se busca que crees un algoritmo el cuál calcule, dado un número n, los número
 
 La primera pregunta que te debe de surgir es:
 
-### ¿Qué es un numero perfecto?
+### ¿Qué es un número perfecto?
 
 Es un número perfecto es aquel el cuál la suma de sus divisores te da el mismo, claro sin contar como divisor a este mismo.
 
@@ -34,14 +34,14 @@ Para entender el comportamiento existen dos procesos diferentes:
 
 ### Verificar si un número dado es un número perfecto
 
-Como primera parte, tenemos que entender qué y cómo se genera un numero perfecto, con un simple ejemplo entenderemos:
+Como primera parte, tenemos que entender qué y cómo se genera un número perfecto, con un simple ejemplo entenderemos:
 
 ```math
 # Número perfecto a verificar
 n = 28
 ```
 
-Uno pensaria que realizando la siguiente sucesion esta correcta, PERO encontramos numeros con decimales
+Uno pensaria que realizando la siguiente sucesion esta correcta, PERO encontramos números con decimales
 
 ```math
 28 / 2 = 14
@@ -51,19 +51,19 @@ Uno pensaria que realizando la siguiente sucesion esta correcta, PERO encontramo
 2  / 2 = 1
 ```
 
-En este caso podriamos redondear al mayor numero para que sea igual a 4; pero estariamos haciendo trampa en la ejecucion del problema y aun mas, podriamos **no** tener una solucion correcta.
+En este caso podriamos redondear al mayor número para que sea igual a 4; pero estariamos haciendo trampa en la ejecucion del problema y aun mas, podriamos **no** tener una solucion correcta.
 
 
 Para ello, debemos tener en cuenta dos cosas mas.
 
-1. Entender realmente que es un numero perfecto:
+1. Entender realmente que es un número perfecto:
 
     > Un número perfecto es un número natural tal que **la suma de sus divisores es igual que el número**. Obviamente no puede incluirse entre los divisores al propio número.
 
     Entendiendo la frase:
     > ... la suma de sus divisores es igual que el número
 
-    Simplemente tenemos que encontrar los divisores de dicho numero, pero surge una duda que es un divisor de un numero; la respuesta en cortas palabras son **números que dividen exactamente a otros números**. 
+    Simplemente tenemos que encontrar los divisores de dicho número, pero surge una duda que es un divisor de un número; la respuesta en cortas palabras son **números que dividen exactamente a otros números**. 
 
     Por ejemplo, los divisores del número 4 son 1, 2 y 4. 
 
@@ -90,23 +90,23 @@ Para ello, debemos tener en cuenta dos cosas mas.
     números que dividen **exactamente** a otros números sin dejar residuo podemos interpretarlo como:
 
     ```python
-    # Numero
+    # Número
     > number = 4
-    # Verificar si al hacer MOD del numero 4 entre 2 no nos da ningun residuo (en este caso 0)
+    # Verificar si al hacer MOD del número 4 entre 2 no nos da ningun residuo (en este caso 0)
     > number % 2 == 0 
     # Verdadera la condicion
     > True
     ```
 
-    A partir de esta condicion, entendemos que podemos sacar aquellos numeros que no contengan residuo a partir de cualquier numero, simplemente debemos filtrarlo:
+    A partir de esta condicion, entendemos que podemos sacar aquellos números que no contengan residuo a partir de cualquier número, simplemente debemos filtrarlo:
 
 
     ```python
-    # Numero
+    # Número
     number = 4
     # Filtro
     list = []
-    # Sacamos los numeros del 1 al 4 [1, 2, 3, 4]
+    # Sacamos los números del 1 al 4 [1, 2, 3, 4]
     for i in range(1, number):
         # Verificamos si no nos da algun residuo
         if number % i == 0:
@@ -116,19 +116,19 @@ Para ello, debemos tener en cuenta dos cosas mas.
     # [1, 2]
     ```
 
-    Entoces a este proceso se le llama obtencion de los numeros primos de un numero; ya que son aquellos numeros que componen a otro (en donde se entiende que estos numeros dados no tienen/generan residuo alguno)
+    Entoces a este proceso se le llama obtencion de los números primos de un número; ya que son aquellos números que componen a otro (en donde se entiende que estos números dados no tienen/generan residuo alguno)
 
 2. A partir de un número dado generar su número perfecto
 
-    Y Ya sabiendo ello de la segunda pregunta principal, podemos ejecutar el proceso para aquellos numeros perfectos:
+    Y Ya sabiendo ello de la segunda pregunta principal, podemos ejecutar el proceso para aquellos números perfectos:
 
 
     ```python
-    # Numero
-    numero = 28
+    # Número
+    número = 28
     # Filtro
     list = []
-    # Sacamos los numeros del 1 al 4 [1, 2, 3, 4]
+    # Sacamos los números del 1 al 4 [1, 2, 3, 4]
     for i in range(1, number):
         # Verificamos si no nos da algun residuo
         if number % i == 0:
@@ -152,11 +152,11 @@ Para ello, debemos tener en cuenta dos cosas mas.
     Donde:
 
     ```math
-    Numero dado == Suma(Primos(Numero dado))
+    Número dado == Suma(Primos(Número dado))
     28 = 28
     ```
 
-    Y a partir de ello **encontramos el numero perfecto**, a apartir de la suma de los numeros primos que contiene el numero dado.
+    Y a partir de ello **encontramos el número perfecto**, a apartir de la suma de los números primos que contiene el número dado.
 
     Y Si lo probamos de manera autonoma, encontramos lo siguiente:
 
@@ -165,7 +165,7 @@ Para ello, debemos tener en cuenta dos cosas mas.
 
 ### A partir de un número dado generar su número perfecto
 
-Ya habiendo entendido el concepto de numero perfecto ahora es mas sencillo aplicar la ecucacion principal para que a partir de un numero saquemos su numero perfecto.
+Ya habiendo entendido el concepto de número perfecto ahora es mas sencillo aplicar la ecucacion principal para que a partir de un número saquemos su número perfecto.
 
 ```math
 2^(n-1) * (2^n - 1) = N
@@ -174,21 +174,21 @@ Ya habiendo entendido el concepto de numero perfecto ahora es mas sencillo aplic
 Donde tenemos lo siguiente
 
 ```math
-n = Numero dado
-N = Numero perfecto encontrado
+n = Número dado
+N = Número perfecto encontrado
 ```
 
-Teniendo la concepcion anterior de: Un numero perfecto se da gracias a la suma de sus numeros pares. Aqui debemos validar si: 
+Teniendo la concepcion anterior de: Un número perfecto se da gracias a la suma de sus números pares. Aqui debemos validar si: 
 
 ```math
-n = Numero par
-(2^n - 1) = Numero par
+n = Número par
+(2^n - 1) = Número par
 ```
 
 Teniendo en cuenta ello si podemos generar el proceso necesario, un calculo sencillo:
 
 ```python
-# Numero Dado
+# Número Dado
 number = 2
 # Verificar si es primo (n)
 if is_prime(number):
@@ -211,6 +211,6 @@ Y Asi tenemos el siguiente proceso si lo automatizamos:
 
 ---
 
-Para Ver una lista de todos los numeros perfectos puedes ver
+Para Ver una lista de todos los números perfectos puedes ver
 
-[Lista de todos los numeros perfectos](./doc/numero_perfecto.pdf)
+[Lista de todos los números perfectos](./doc/número_perfecto.pdf)
