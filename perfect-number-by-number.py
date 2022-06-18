@@ -29,20 +29,23 @@ class PerfectNumberByNumber:
                 result = calc * complement
                 print("{} is {}".format(number, result))
     
+    def main_method(self):
+        # Manual
+        # n = self.get_number()
+        # try:
+        #     self.calculate_perfect(n)
+        # except Exception as e:
+        #     print(float('inf'))
+
+        # Automatic
+        for n in range(0,100):
+            try:
+                self.calculate_perfect(n)
+            except Exception as e:
+                print(float('inf'))
+
+    
 # Init program
 if __name__ == "__main__":
     perfect_number = PerfectNumberByNumber()
-    # Manual
-    # n = perfect_number.get_number()
-    # try:
-    #     perfect_number.calculate_perfect(n)
-    # except Exception as e:
-    #     print(float('inf'))
-    
-    # Automatic
-    for n in range(0,100):
-        try:
-            perfect_number.calculate_perfect(n)
-        except Exception as e:
-            print(float('inf'))
-
+    perfect_number.main_method()
