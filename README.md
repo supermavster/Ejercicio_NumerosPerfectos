@@ -1,6 +1,7 @@
 # Ejercicio: Números Perfectos
 
 En este repositorio encuentras la descripción del ejercicio que te invita a resolver un problema el cual consiste en encontrar a los primeros números perfectos menores a n.
+
 ## Descripción
 
 Se busca que crees un algoritmo el cuál calcule, dado un número n, los números perfectos que son menores a n.
@@ -53,7 +54,6 @@ Uno pensaria que realizando la siguiente sucesion esta correcta, PERO encontramo
 
 En este caso podriamos redondear al mayor número para que sea igual a 4; pero estariamos haciendo trampa en la ejecucion del problema y aun mas, podriamos **no** tener una solucion correcta.
 
-
 Para ello, debemos tener en cuenta dos cosas mas.
 
 1. Entender realmente que es un número perfecto:
@@ -63,9 +63,9 @@ Para ello, debemos tener en cuenta dos cosas mas.
     Entendiendo la frase:
     > ... la suma de sus divisores es igual que el número
 
-    Simplemente tenemos que encontrar los divisores de dicho número, pero surge una duda que es un divisor de un número; la respuesta en cortas palabras son **números que dividen exactamente a otros números**. 
+    Simplemente tenemos que encontrar los divisores de dicho número, pero surge una duda que es un divisor de un número; la respuesta en cortas palabras son **números que dividen exactamente a otros números**.
 
-    Por ejemplo, los divisores del número 4 son 1, 2 y 4. 
+    Por ejemplo, los divisores del número 4 son 1, 2 y 4.
 
     ```math
     n = 4
@@ -100,7 +100,6 @@ Para ello, debemos tener en cuenta dos cosas mas.
 
     A partir de esta condicion, entendemos que podemos sacar aquellos números que no contengan residuo a partir de cualquier número, simplemente debemos filtrarlo:
 
-
     ```python
     # Número
     number = 4
@@ -121,7 +120,6 @@ Para ello, debemos tener en cuenta dos cosas mas.
 2. A partir de un número dado generar su número perfecto
 
     Y Ya sabiendo ello de la segunda pregunta principal, podemos ejecutar el proceso para aquellos números perfectos:
-
 
     ```python
     # Número
@@ -162,7 +160,6 @@ Para ello, debemos tener en cuenta dos cosas mas.
 
     ![Result](./doc/perfect-number.png)
 
-
 ### A partir de un número dado generar su número perfecto
 
 Ya habiendo entendido el concepto de número perfecto ahora es mas sencillo aplicar la ecucacion principal para que a partir de un número saquemos su número perfecto.
@@ -178,7 +175,7 @@ n = Número dado
 N = Número perfecto encontrado
 ```
 
-Teniendo la concepcion anterior de: Un número perfecto se da gracias a la suma de sus números pares. Aqui debemos validar si: 
+Teniendo la concepcion anterior de: Un número perfecto se da gracias a la suma de sus números pares. Aqui debemos validar si:
 
 ```math
 n = Número par
