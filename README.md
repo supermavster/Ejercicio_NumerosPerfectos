@@ -214,3 +214,5 @@ Y Asi tenemos el siguiente proceso si lo automatizamos:
 Para Ver una lista de todos los números perfectos puedes ver
 
 [Lista de todos los números perfectos](./doc/número_perfecto.pdf)
+
+Prueba
